@@ -1,0 +1,43 @@
+<AML>
+   <Item type="CommandBarMenu" action="add">
+       <name>_my_toc_menu</name>
+       <label>My category</label>
+   </Item>
+   <!-- Create menu button A31100D376FC42229FD37A2FABD2DA57 -->
+   <Item type="CommandBarMenuButton" action="add">
+       <name>_my_toc_button</name>
+       <label>My toc button</label>
+       <additional_data>{"itemTypeId":"E8C808728D044EA1B8EB9DCF2B1D6132"}</additional_data>
+       <parent_menu>E36512464DF44D78926768E71D643CCC</parent_menu>
+   </Item>
+   <!-- Add menu to toc -->
+   <Item type="CommandBarSectionItem" action="add">
+       <source_id>
+           <Item type="CommandBarSection" action="get" select="id">
+               <name>com.aras.innovator.cui_default.toc</name>
+           </Item>
+       </source_id>
+       <related_id>E36512464DF44D78926768E71D643CCC</related_id>
+       <action>Add</action>
+       <role>
+           <Item type="Identity" action="get">
+               <name>World</name>
+           </Item>
+       </role>
+   </Item>
+   <!-- Add button to client style -->
+   <Item type="CommandBarSectionItem" action="add">
+       <source_id>
+           <Item type="CommandBarSection" action="get" select="id">
+               <name>sg_student_TOC_Content</name>
+           </Item>
+       </source_id>
+       <related_id>A31100D376FC42229FD37A2FABD2DA57</related_id>
+       <action>Add</action>
+       <role>
+           <Item type="Identity" action="get" select="id">
+               <name>World</name>
+           </Item>
+       </role>
+   </Item>
+</AML>
